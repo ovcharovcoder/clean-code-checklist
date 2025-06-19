@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Чистий Код — Andriy Ovcharov</title>
+    <title>Чистий Код — Ovcharov Design Lab</title>
     <style>
       body {
         font-family: 'JetBrains Mono', monospace;
@@ -36,9 +36,6 @@
         text-decoration: line-through;
         color: #5a5f66;
       }
-      .result-text {
-        text-align: center;
-      }
       code {
         background: #21262d;
         padding: 0.2em 0.4em;
@@ -51,6 +48,15 @@
         overflow-x: auto;
         border-radius: 8px;
         margin-top: 0.5em;
+      }
+      .result {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #1f6feb;
+        border-radius: 8px;
+        color: #ffffff;
+        display: none;
+        text-align: center;
       }
       footer {
         margin-top: 3rem;
@@ -136,7 +142,7 @@
 
       <h3>🧠 Логіка</h3>
       <label><input type="checkbox" /> Перевірено всі гілки?</label>
-      <label><input type="checkbox" /> Використано ===, а не == ?</label>
+      <label><input type="checkbox" /> Використано ===, а не ==?</label>
       <label><input type="checkbox" /> Оброблені всі edge cases?</label>
 
       <h3>📜 Коментарі</h3>
@@ -155,23 +161,37 @@
         ><input type="checkbox" /> Протестовано руками або автотестом?</label
       >
     </section>
-    
+
     <div class="result">
-      <p class="result-text">Якщо все "ok", то ти красунчик та можеш пушити.</p>
+      <p class="result-text">
+        🟢 Усі пункти виконано? Ти — бог чистоти коду. Можеш пушити зі спокійною
+        душею 😎🚀
+      </p>
     </div>
-    
 
     <footer>
-      Створено з ❤️ <strong>Andriy Ovcharov</strong><br />
+      Створено з ❤️ <strong>Ovcharov Design Lab</strong><br />
       <em>«Кодуй зі смаком. Кодуй свідомо.»</em>
     </footer>
 
     <script>
-      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const result = document.querySelector('.result');
+
+      function updateResult() {
+        const allChecked = [...checkboxes].every(cb => cb.checked);
+        result.style.display = allChecked ? 'block' : 'none';
+      }
+
+      checkboxes.forEach(cb => {
         cb.addEventListener('change', () => {
           cb.parentElement.classList.toggle('checked', cb.checked);
+          updateResult();
         });
       });
+
+      // Початковий стан
+      updateResult();
     </script>
   </body>
 </html>
