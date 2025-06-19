@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Чистий Код — Andriy Ovcharov</title>
+    <style>
+      body {
+        font-family: 'JetBrains Mono', monospace;
+        background: #0d1117;
+        color: #c9d1d9;
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
+      }
+      h1,
+      h2 {
+        color: #58a6ff;
+      }
+      section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        background: #161b22;
+      }
+      label {
+        display: block;
+        margin: 0.5rem 0;
+        cursor: pointer;
+      }
+      input[type='checkbox'] {
+        margin-right: 0.5rem;
+      }
+      .checked {
+        text-decoration: line-through;
+        color: #5a5f66;
+      }
+      code {
+        background: #21262d;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        color: #79c0ff;
+      }
+      pre {
+        background: #21262d;
+        padding: 1em;
+        overflow-x: auto;
+        border-radius: 8px;
+        margin-top: 0.5em;
+      }
+      footer {
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        color: #8b949e;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🧼 Чистий Код — Принципи + Чекліст</h1>
+    <p><em>Кодуй зі смаком. Кодуй свідомо. Перед пушем — перевір себе.</em></p>
+
+    <section>
+      <h2>🔟 Основні принципи чистого коду</h2>
+      <ul>
+        <li>
+          <strong>Один рядок — одна дія</strong><br /><code
+            >let total = price * count;</code
+          >
+          — і нічого зайвого.
+        </li>
+        <li>
+          <strong>Кожне значення — своя змінна</strong><br />Уникай виразів типу
+          <code>if (x > 10 && y === 'ready')</code>, розбий на зрозумілі назви.
+        </li>
+        <li>
+          <strong>Змінна — це ім’я, не загадка</strong><br /><code
+            >let userData</code
+          >
+          краще ніж <code>let a</code>.
+        </li>
+        <li>
+          <strong>Функція робить одну річ</strong><br />Не міксуй валідацію,
+          збереження та email в одному місці.
+        </li>
+        <li>
+          <strong>DRY — Don’t Repeat Yourself</strong><br />Винось повторюване в
+          функції.
+        </li>
+        <li>
+          <strong>Не зловживай скороченнями</strong><br />Скорочуй тільки тоді,
+          коли це очевидно.
+        </li>
+        <li>
+          <strong>Використовуй <code>const</code>, де можливо</strong>
+        </li>
+        <li>
+          <strong>Мінімізуй вкладеність</strong><br />Краще ранній
+          <code>return</code>, ніж вкладене <code>if</code>.
+        </li>
+        <li><strong>Коментар пояснює «чому», а не «що»</strong></li>
+        <li>
+          <strong>Форматування — обличчя коду</strong><br />ESLint + Prettier у
+          поміч.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>✅ Чекліст чистого коду</h2>
+
+      <h3>🔡 Імена та змінні</h3>
+      <label><input type="checkbox" /> Ім’я передає суть?</label>
+      <label><input type="checkbox" /> Магічні значення винесені?</label>
+      <label><input type="checkbox" /> Немає схожих імен, що плутають?</label>
+
+      <h3>🧩 Структура</h3>
+      <label><input type="checkbox" /> Один рядок — одна дія?</label>
+      <label><input type="checkbox" /> Функції невеликі, роблять одне?</label>
+      <label><input type="checkbox" /> Глибина вкладеності мінімальна?</label>
+
+      <h3>♻️ Повтори</h3>
+      <label><input type="checkbox" /> Уникнуто копіпасту?</label>
+      <label><input type="checkbox" /> Схожі речі реалізовані однаково?</label>
+
+      <h3>🧼 Форматування</h3>
+      <label><input type="checkbox" /> Prettier / ESLint пройшлися?</label>
+      <label
+        ><input type="checkbox" /> Всі відступи, лапки та пробіли — ок?</label
+      >
+      <label><input type="checkbox" /> Видалено мертвий код?</label>
+
+      <h3>🧠 Логіка</h3>
+      <label><input type="checkbox" /> Перевірено всі гілки?</label>
+      <label><input type="checkbox" /> Використано ===, !==?</label>
+      <label><input type="checkbox" /> Оброблені всі edge cases?</label>
+
+      <h3>📜 Коментарі</h3>
+      <label><input type="checkbox" /> Є коментарі там, де треба?</label>
+      <label
+        ><input type="checkbox" /> Коментарі пояснюють «чому», а не «що»?</label
+      >
+      <label
+        ><input type="checkbox" /> Код зрозумілий навіть без коментарів?</label
+      >
+
+      <h3>🧪 Тестування</h3>
+      <label><input type="checkbox" /> Код перевірено в дії?</label>
+      <label><input type="checkbox" /> Не ламає існуючу логіку?</label>
+      <label
+        ><input type="checkbox" /> Протестовано руками або автотестом?</label
+      >
+    </section>
+
+    <footer>
+      Створено з ❤️ в <strong>Andriy Ovcharov</strong><br />
+      <em>«Кодуй зі смаком. Кодуй свідомо.»</em>
+    </footer>
+
+    <script>
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          cb.parentElement.classList.toggle('checked', cb.checked);
+        });
+      });
+    </script>
+  </body>
+</html>
