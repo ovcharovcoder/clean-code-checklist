@@ -291,7 +291,7 @@ const translations = {
     php_checklist_optimization_1: 'Оптимізовано продуктивність?',
     php_checklist_optimization_1_small: '(Уникай зайвих запитів до БД)',
     php_checklist_optimization_1_tooltip: 'Оптимізація зменшує навантаження.',
-    php_checklist_optimization_2: 'Чи вдалося запобігти надмірному використанню ресурсів',
+    php_checklist_optimization_2: 'Вдалося запобігти надмірному використанню ресурсів',
     php_checklist_optimization_2_small: '(Перевір кешування)',
     php_checklist_optimization_2_tooltip: 'Ефективний код економить ресурси.',
 
