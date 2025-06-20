@@ -229,7 +229,7 @@ const translations = {
     php_checklist_structure_3_tooltip:
       'Менша вкладеність — краща читабельність.',
     php_repetition_legend: '♻️ Повтори',
-    php_checklist_repetition_1: 'Уникнуто копіпасту?',
+    php_checklist_repetition_1: 'Уникнено копіпасту?',
     php_checklist_repetition_1_small: '(Винось у функції чи класи)',
     php_checklist_repetition_1_tooltip: 'Повторюваний код ускладнює підтримку.',
     php_checklist_repetition_2: 'Схожі задачі реалізовані однаково?',
@@ -344,7 +344,7 @@ const translations = {
     py_checklist_structure_3_tooltip:
       'Менша вкладеність — краща читабельність.',
     py_repetition_legend: '♻️ Повтори',
-    py_checklist_repetition_1: 'Уникнуто копіпасту?',
+    py_checklist_repetition_1: 'Уникнено копіпасту?',
     py_checklist_repetition_1_small: '(Винось у функції)',
     py_checklist_repetition_1_tooltip: 'Повторюваний код ускладнює підтримку.',
     py_checklist_repetition_2: 'Схожі задачі реалізовані однаково?',
