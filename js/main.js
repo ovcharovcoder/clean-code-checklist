@@ -135,7 +135,7 @@ const translations = {
       'Вдалося запобігти надмірному використанню ресурсів?',
     js_checklist_optimization_2_small:
       '(Перевір витоки пам’яті в замиканнях чи слухачах подій)',
-    js_checklist_optimization_3: 'Чи активовано строгий режим?',
+    js_checklist_optimization_3: 'Чи активовано режим "use strict"?',
     js_checklist_optimization_3_small:
       '(Додай <code>"use strict";</code> на початку файлу)',
 
