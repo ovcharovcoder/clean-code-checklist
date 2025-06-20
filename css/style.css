@@ -25,7 +25,7 @@ body.light-theme {
   --tooltip-bg: #e1e4e8;
   --code-bg: #f6f8fa;
   --code-color: #032f62;
-  --active-button-bg: #4797f1;
+  --active-button-bg: #63a7e2;
 }
 
 body {
@@ -59,15 +59,17 @@ section.checklist {
   border-radius: 8px;
   background: var(--section-bg);
   transition: background 0.3s ease, border-color 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-section.checklist[style*='display: none'] {
-  display: none;
+section.checklist[style*='display: block'] {
+  opacity: 1;
+  display: block;
 }
 
 fieldset {
   border: none;
-  padding: 0;
   margin: 1rem 0;
 }
 
@@ -113,10 +115,6 @@ small {
   font-size: 0.8rem;
 }
 
-small a {
-  color: var(--code-color);
-}
-
 .tooltip {
   background: none;
   border: none;
@@ -127,13 +125,13 @@ small a {
 }
 
 .tooltip:hover::after {
-  content: attr(aria-label);
+  content: attr(data-tooltip);
   position: absolute;
   background: var(--tooltip-bg);
   color: var(--text-color);
   padding: 0.5rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   z-index: 10;
 }
 
@@ -167,31 +165,33 @@ pre {
 }
 
 .controls,
-.info,
-.lang {
+.lang,
+.info {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 4px 8px;
   background: var(--accent-color);
   color: var(--result-text);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 4px;
 }
 
 button:hover {
   background: var(--active-button-bg);
 }
 
-button.language-toggle.active {
+button.language-toggle.active,
+.translate-toggle.active {
   background: var(--active-button-bg);
   font-weight: bold;
 }
@@ -214,7 +214,7 @@ button.language-toggle.active {
   margin-top: 2rem;
   padding: 1rem;
   background-color: var(--result-bg);
-  border-radius: 8px;
+  border-radius: 4px;
   color: var(--result-text);
   display: none;
   text-align: center;
@@ -240,7 +240,14 @@ footer {
   section {
     padding: 0.5rem;
   }
-  .controls {
-    flex-wrap: wrap;
+
+  fieldset {
+    padding-left: 0px;
+  }
+  .checklist {
+    padding: 10px;
+  }
+  .checklist ul {
+    padding-left: 20px;
   }
 }
