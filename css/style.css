@@ -11,6 +11,7 @@
   --code-bg: #21262d;
   --code-color: #79c0ff;
   --active-button-bg: #1f6feb;
+  --footer-text: #8b949e;
 }
 
 body.light-theme {
@@ -220,10 +221,11 @@ button.language-toggle.active,
   text-align: center;
 }
 
-footer {
+footer,
+footer a {
   margin-top: 3rem;
   font-size: 0.9rem;
-  color: #8b949e;
+  color: var(--footer-text);
   text-align: center;
 }
 
