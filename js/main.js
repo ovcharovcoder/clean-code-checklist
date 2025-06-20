@@ -404,7 +404,7 @@ const translations = {
     py_checklist_optimization_1: 'Оптимізовано продуктивність?',
     py_checklist_optimization_1_small: '(Уникай зайвих циклів)',
     py_checklist_optimization_1_tooltip: 'Оптимізація зменшує навантаження.',
-    py_checklist_optimization_2: 'Чи вдалося запобігти надмірному використанню ресурсів',
+    py_checklist_optimization_2: 'Вдалося запобігти надмірному використанню ресурсів',
     py_checklist_optimization_2_small: '(Перевір кешування)',
     py_checklist_optimization_2_tooltip: 'Ефективний код економить ресурси.',
   },
