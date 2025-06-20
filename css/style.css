@@ -1,1 +1,62 @@
-
+ body {
+        font-family: 'JetBrains Mono', monospace;
+        background: #0d1117;
+        color: #c9d1d9;
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
+      }
+      h1,
+      h2 {
+        color: #58a6ff;
+      }
+      section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        background: #161b22;
+      }
+      label {
+        display: block;
+        margin: 0.5rem 0;
+        cursor: pointer;
+      }
+      input[type='checkbox'] {
+        margin-right: 0.5rem;
+      }
+      li + li {
+      margin-top: 10px;
+      }
+      .checked {
+        text-decoration: line-through;
+        color: #5a5f66;
+      }
+      code {
+        background: #21262d;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        color: #79c0ff;
+      }
+      pre {
+        background: #21262d;
+        padding: 1em;
+        overflow-x: auto;
+        border-radius: 8px;
+        margin-top: 0.5em;
+      }
+      .result {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #1f6feb;
+        border-radius: 8px;
+        color: #ffffff;
+        display: none;
+        text-align: center;
+      }
+      footer {
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        color: #8b949e;
+        text-align: center;
+      }
