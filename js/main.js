@@ -171,7 +171,7 @@ const translations = {
       '(Перевір витоки пам’яті в замиканнях чи слухачах подій)',
     js_checklist_optimization_2_tooltip:
       'Неконтрольовані ресурси можуть сповільнити програму.',
-    js_checklist_optimization_3: 'Чи використаний строгий режим?',
+    js_checklist_optimization_3: 'Чи активовано строгий режим?',
     js_checklist_optimization_3_small:
       '(Додай <code>"use strict";</code> на початку файлу)',
     js_checklist_optimization_3_tooltip:
