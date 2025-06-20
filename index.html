@@ -5,681 +5,530 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
+      data-translate="meta_description"
       content="Чеклісти та принципи чистого коду для JavaScript, PHP та Python від Андрія Овчарова."
     />
     <meta
       name="keywords"
+      data-translate="meta_keywords"
       content="чистий код, JavaScript, PHP, Python, програмування, чекліст"
     />
-    <title>Чистий Код — JavaScript, PHP, Python</title>
+    <title data-translate="title">Чистий Код — JavaScript, PHP, Python</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <h1>🧼 Чистий Код — Принципи + Чекліст</h1>
-      <p>
-        <em>Кодуй зі смаком. Кодуй свідомо. Перед пушем — перевір себе.</em>
-      </p>
+      <h1 data-translate="header_h1">🧼 Чистий Код — Принципи + Чекліст</h1>
+      <p data-translate="header_p"><em>Кодуй зі смаком. Кодуй свідомо. Перед пушем — перевір себе.</em></p>
       <div class="controls">
         <div class="lang">
-          <button
-            type="button"
-            class="language-toggle active"
-            data-language="js"
-          >
-            JavaScript
-          </button>
-          <button type="button" class="language-toggle" data-language="php">
-            PHP
-          </button>
-          <button type="button" class="language-toggle" data-language="py">
-            Python
-          </button>
+        <button type="button" class="language-toggle active" data-language="js">JavaScript</button>
+        <button type="button" class="language-toggle" data-language="php">PHP</button>
+        <button type="button" class="language-toggle" data-language="py">Python</button>
+        <button type="button" id="reset-checklist" data-translate="reset_checklist">Скинути чекліст</button>
         </div>
         <div class="info">
           <button type="button" id="theme-toggle">
-            <span class="theme-icon"></span>
-            <span class="theme-text">Змінити тему</span>
-          </button>
-          <button type="button" id="reset-checklist">Скинути чекліст</button>
+          <span class="theme-icon"></span> <span class="theme-text" data-translate="theme_toggle">Змінити тему</span>
+        </button> 
+         <button type="button" class="translate-toggle active" data-translate-lang="uk">UA</button>
+        <button type="button" class="translate-toggle" data-translate-lang="en">EN</button>
         </div>
       </div>
       <div class="progress">
-        Виконано: <span id="progress-count">0</span> з
+        <span data-translate="progress_label">Виконано:</span> <span id="progress-count">0</span> <span data-translate="progress_of">з</span>
         <span id="total-count">0</span>
       </div>
     </header>
 
     <main>
       <section class="checklist" data-language="js">
-        <h2>🔟 Основні принципи чистого JavaScript-коду</h2>
+        <h2 data-translate="js_principles_h2">🔟 Основні принципи чистого JavaScript-коду</h2>
         <ul role="list">
-          <li>
-            <strong>Один рядок — одна дія</strong><br /><code
-              >const total = price * quantity;</code
-            >
-            — уникай кількох операцій в одному рядку
+          <li data-translate="js_principle_1">
+            <strong>Один рядок — одна дія</strong><br /><code>const total = price * quantity;</code>
+            — уникай кількох операцій в одному рядку.
           </li>
-          <li>
-            <strong>Змінні з чіткими іменами</strong><br /><code
-              >const userProfile</code
-            >
-            краще, ніж <code>const u</code>.
+          <li data-translate="js_principle_2">
+            <strong>Змінні з чіткими іменами</strong><br /><code>const userProfile;</code> краще, ніж <code>const u;</code>
           </li>
-          <li>
-            <strong>Функція робить одну річ</strong><br />Наприклад, функція
-            <code>fetchUserData</code> лише отримує дані, а не оновлює UI.
+          <li data-translate="js_principle_3">
+            <strong>Функція робить одну річ</strong><br />
+            Наприклад, функція <code>fetchUserProfile;</code> лише отримує дані, а не оновлює UI.
           </li>
-          <li>
+          <li data-translate="js_principle_4">
             <strong>DRY — Don’t Repeat Yourself</strong><br />Використовуй
-            <code>map</code> або <code>reduce</code> для уникнення повторів.
+            <code>map</code> або <code>slice</code> для уникнення повторів.
           </li>
-          <li>
-            <strong>Використовуй <code>const</code> за замовчуванням</strong
-            ><br />Замість <code>let</code> використовуй <code>const</code>,
-            якщо значення не змінюється.
+          <li data-translate="js_principle_5">
+            <strong>Використовуй <code>use</code> за замовчуванням</strong
+            ><br />Замість <code>let</code> використовуй
+            <code>const</code>, якщо значення не змінюється.
           </li>
-          <li>
+          <li data-translate="js_principle_6">
             <strong>Мінімізуй вкладеність</strong><br />Використовуй ранній
             <code>return</code>, наприклад:
             <pre><code>if (!user) return null;</code></pre>
           </li>
-          <li>
+          <li data-translate="js_principle_7">
             <strong>Коментарі пояснюють «чому»</strong><br />Наприклад:
             <pre><code>// Кешуємо результат для оптимізації
 const cachedData = getData();</code></pre>
           </li>
-          <li>
-            <strong>Використовуй ES6+ можливості</strong><br />Стрілкові
-            функції, деструктуризація: <code>const { id, name } = user;</code>
+          <li data-translate="js_principle_8">
+            <strong>Використовуй ES6+ можливості</strong><br />Стрілкові функції,
+            деструктуризація: <code>const { id, name } = user;</code>
           </li>
-          <li>
+          <li data-translate="js_principle_9">
             <strong>Обробляй асинхронність чітко</strong><br />Використовуй
             <code>async/await</code> замість <code>.then</code>.
           </li>
-          <li>
+          <li data-translate="js_principle_10">
             <strong>Форматуй код автоматично</strong><br />ESLint + Prettier для
             єдиного стилю.
           </li>
-          <li>
+          <li data-translate="js_principle_11">
             <strong>Уникай глобальних змінних</strong><br />Використовуй модулі
             або замикання.
           </li>
-          <li>
+          <li data-translate="js_principle_12">
             <strong>Перевіряй типи даних</strong><br />Використовуй
             <code>typeof</code> або TypeScript для безпеки.
           </li>
         </ul>
 
-        <h2>✅ Чекліст чистого JavaScript-коду</h2>
+        <h2 data-translate="js_checklist_h2">✅ Чекліст чистого JavaScript-коду</h2>
         <fieldset>
-          <legend>🔡 Імена та змінні</legend>
+          <legend data-translate="js_names_legend">🔡 Імена та змінні</legend>
           <label>
             <input type="checkbox" aria-label="Ім’я змінної передає її суть" />
-            Ім’я змінної/функції передає її суть?
+            <span data-translate="js_checklist_names_1">Ім’я змінної/функції передає її суть?</span>
             <small
+              data-translate="js_checklist_names_1_small"
               >(Наприклад, <code>calculateTotalPrice</code> краще, ніж
               <code>calc</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Чіткі імена полегшують читання коду та підтримку."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Магічні значення винесені в константи"
             />
-            Магічні значення винесені?
+            <span data-translate="js_checklist_names_2">Магічні значення винесені?</span>
             <small
+              data-translate="js_checklist_names_2_small"
               >(Наприклад, <code>const MAX_USERS = 100;</code> замість
               <code>100</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Магічні числа та строки ускладнюють розуміння логіки."
-            >
-              ?
-            </button>
           </label>
           <label>
-            <input
-              type="checkbox"
-              aria-label="Немає схожих імен, що плутають"
-            />
-            Немає схожих імен, що плутають?
+            <input type="checkbox" aria-label="Немає схожих імен, що плутають" />
+            <span data-translate="js_checklist_names_3">Немає схожих імен, що плутають?</span>
             <small
+              data-translate="js_checklist_names_3_small"
               >(Наприклад, <code>user</code> і <code>users</code> можуть
               заплутати)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Уникайте імен, які можуть викликати плутанину."
-            >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧩 Структура</legend>
+          <legend data-translate="js_structure_legend">🧩 Структура</legend>
           <label>
             <input type="checkbox" aria-label="Один рядок — одна дія" />
-            Один рядок — одна дія?
+            <span data-translate="js_checklist_structure_1">Один рядок — одна дія?</span>
             <small
-              >(Наприклад, <code>const sum = a + b;</code> замість кількох
-              дій)</small
+              data-translate="js_checklist_structure_1_small"
+              >(Наприклад, <code>const sum = a + b;</code> замість кількох дій)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Один рядок — одна операція для кращої читабельності."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Функції невеликі, роблять одне"
             />
-            Функції невеликі, роблять одне?
+            <span data-translate="js_checklist_structure_2">Функції невеликі, роблять одне?</span>
             <small
-              >(Функція до 20 рядків, наприклад,
-              <code>getUserById</code>)</small
+              data-translate="js_checklist_structure_2_small"
+              >(Функція до 20 рядків, наприклад, <code>getUserById</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Одна функція — одна відповідальність."
-            >
-              ?
-            </button>
           </label>
           <label>
-            <input
-              type="checkbox"
-              aria-label="Глибина вкладеності мінімальна"
-            />
-            Глибина вкладеності мінімальна?
+            <input type="checkbox" aria-label="Глибина вкладеності мінімальна" />
+            <span data-translate="js_checklist_structure_3">Глибина вкладеності мінімальна?</span>
             <small
+              data-translate="js_checklist_structure_3_small"
               >(Використовуй ранній <code>return</code> замість глибоких
               <code>if</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Менша вкладеність полегшує розуміння логіки."
-            >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>♻️ Повтори</legend>
+          <legend data-translate="js_repetition_legend">♻️ Повтори</legend>
           <label>
             <input type="checkbox" aria-label="Уникнено копіпасту" />
-            Уникнено копіпасту?
+            <span data-translate="js_checklist_repetition_1">Уникнено копіпасту?</span>
             <small
-              >(Наприклад, використовуй <code>array.map</code> замість
-              циклів)</small
+              data-translate="js_checklist_repetition_1_small"
+              >(Наприклад, використовуй <code>array.map</code> замість циклів)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Повторюваний код винось у функції чи утиліти."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Схожі речі реалізовані однаково"
             />
-            Схожі речі реалізовані однаково?
+            <span data-translate="js_checklist_repetition_2">Схожі речі реалізовані однаково?</span>
             <small
+              data-translate="js_checklist_repetition_2_small"
               >(Наприклад, форматування дат через <code>date-fns</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Уніфікований підхід зменшує помилки."
-            >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧼 Форматування</legend>
+          <legend data-translate="js_formatting_legend">🧼 Форматування</legend>
           <label>
             <input
               type="checkbox"
               aria-label="Прогнав Prettier/ESLint форматувальники"
             />
-            Прогнав через Prettier/ESLint?
+            <span data-translate="js_checklist_formatting_1">Прогнав через Prettier/ESLint?</span>
             <small
-              >(<a href="https://eslint.org" target="_blank" rel="noopener"
+              data-translate="js_checklist_formatting_1_small"
+              >(<a
+                href="https://eslint.org"
+                target="_blank"
+                rel="noopener"
                 >ESLint</a
               >
               і
-              <a href="https://prettier.io" target="_blank" rel="noopener"
+              <a
+                href="https://prettier.io"
+                target="_blank"
+                rel="noopener"
                 >Prettier</a
               >)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Автоматичне форматування забезпечує єдиний стиль."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Усі відступи, лапки та пробіли однакові"
             />
-            Всі відступи, лапки, пробіли — однакові?
-            <small>(Перевір через форматувальник)</small>
-            <button
-              class="tooltip"
-              aria-label="Консистентність стилю полегшує співпрацю."
-            >
-              ?
-            </button>
+            <span data-translate="js_checklist_formatting_2">Всі відступи, лапки, пробіли — однакові?</span>
+            <small data-translate="js_checklist_formatting_2_small">(Перевір через форматувальник)</small>
           </label>
           <label>
             <input type="checkbox" aria-label="Видалено мертвий код" />
-            Видалено мертвий код?
+            <span data-translate="js_checklist_formatting_3">Видалено мертвий код?</span>
             <small
-              >(Наприклад, невикористані функції чи
-              <code>console.log</code>)</small
+              data-translate="js_checklist_formatting_3_small"
+              >(Наприклад, невикористані функції чи <code>console.log</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Мертвий код ускластнює підтримку проєкту."
-            >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧠 Логіка</legend>
+          <legend data-translate="js_logic_legend">🧠 Логіка</legend>
           <label>
             <input type="checkbox" aria-label="Перевірено всі гілки" />
-            Перевірено всі гілки?
+            <span data-translate="js_checklist_logic_1">Перевірено всі гілки?</span>
             <small
+              data-translate="js_checklist_logic_1_small"
               >(Перевір <code>if/else</code>, <code>switch</code>, цикли)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Усі гілки логіки повинні бути протестовані."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input type="checkbox" aria-label="Використано ===, а не ==" />
-            Використано <code>===</code>, а не <code>==</code>?
-            <small>(Строга рівність уникає помилок)</small>
-            <button
-              class="tooltip"
-              aria-label="Строга рівність зменшує неочікувані приведення типів."
-            >
-              ?
-            </button>
+            <span data-translate="js_checklist_logic_2">Використано <code>===</code>, а не <code>==</code>?</span>
+            <small data-translate="js_checklist_logic_2_small">(Строга рівність уникає помилок)</small>
           </label>
           <label>
             <input type="checkbox" aria-label="Оброблені всі edge cases" />
-            Оброблені всі edge cases?
+            <span data-translate="js_checklist_logic_3">Оброблені всі edge cases?</span>
             <small
+              data-translate="js_checklist_logic_3_small"
               >(Перевір <code>null</code>, <code>undefined</code>, порожні
               масиви)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Edge cases можуть викликати помилки в продакшені."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input type="checkbox" aria-label="Перевірено асинхронний код" />
-            Перевірено асинхронний код?
+            <span data-translate="js_checklist_logic_4">Перевірено асинхронний код?</span>
             <small
-              >(Переконайся, що <code>async/await</code> обробляє
-              помилки)</small
+              data-translate="js_checklist_logic_4_small"
+              >(Переконайся, що <code>async/await</code> обробляє помилки)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Асинхронний код потребує обробки помилок через try/catch."
-            >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>📜 Коментарі</legend>
+          <legend data-translate="js_comments_legend">📜 Коментарі</legend>
           <label>
             <input type="checkbox" aria-label="Є коментарі там, де треба" />
-            Є коментарі там, де треба?
-            <small>(Коментуй складну логіку, наприклад, замикання)</small>
-            <button
-              class="tooltip"
-              aria-label="Коментарі потрібні лише для неочевидної логіки."
-            >
-              ?
-            </button>
+            <span data-translate="js_checklist_comments_1">Є коментарі там, де треба?</span>
+            <small data-translate="js_checklist_comments_1_small">(Коментуй складну логіку, наприклад, замикання)</small>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Коментарі пояснюють чому, а не що"
             />
-            Коментарі пояснюють «чому», а не «що»?
+            <span data-translate="js_checklist_comments_2">Коментарі пояснюють «чому», а не «що»?</span>
             <small
-              >(Наприклад, "// Дозволяємо доступ до адмінки лише адміністраторам
-              — решта не повинна бачити ці опції" )</small
+              data-translate="js_checklist_comments_2_small"
+              >(Наприклад, "// Дозволяємо доступ до адмінки лише адміністраторам")</small
             >
           </label>
           <label>
-            <input type="checkbox" aria-label="Код зрозумілий без коментарів" />
-            Код зрозумілий без коментарів?
-            <small>(Чіткі імена зменшують потребу в коментарях)</small>
-            <button
-              class="tooltip"
-              aria-label="Хороший код самодокументований."
+            <input
+              type="checkbox"
+              aria-label="Код зрозумілий без коментарів"
+            />
+            <span data-translate="js_checklist_comments_3">Код зрозумілий без коментарів?</span>
+            <small
+              data-translate="js_checklist_comments_3_small"
+              >(Чіткі імена зменшують потребу в коментарях)</small
             >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧪 Тестування</legend>
+          <legend data-translate="js_testing_legend">🧪 Тестування</legend>
           <label>
             <input type="checkbox" aria-label="Код перевірено в дії" />
-            Код перевірено в дії?
-            <small>(Запусти та перевір результат)</small>
-            <button
-              class="tooltip"
-              aria-label="Перевір, що код працює як очікувано."
-            >
-              ?
-            </button>
+            <span data-translate="js_checklist_testing_1">Код перевірено в дії?</span>
+            <small data-translate="js_checklist_testing_1_small">(Запусти та перевір результат)</small>
           </label>
           <label>
             <input type="checkbox" aria-label="Не ламає існуючу логіку" />
-            Не ламає існуючу логіку?
-            <small>(Перевір старі функції після змін)</small>
-            <button
-              class="tooltip"
-              aria-label="Нові зміни не повинні порушувати старий код."
-            >
-              ?
-            </button>
+            <span data-translate="js_checklist_testing_2">Не ламає існуючу логіку?</span>
+            <small data-translate="js_checklist_testing_2_small">(Перевір старі функції після змін)</small>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Протестовано руками або автотестом"
             />
-            Протестовано руками або автотестом?
+            <span data-translate="js_checklist_testing_3">Протестовано руками або автотестом?</span>
             <small
+              data-translate="js_checklist_testing_3_small"
               >(Використовуй <code>Jest</code> або <code>Mocha</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Тести забезпечують стабільність коду."
-            >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🔒 Безпека</legend>
+          <legend data-translate="js_security_legend">🔒 Безпека</legend>
           <label>
             <input
               type="checkbox"
               aria-label="Перевірено на вразливості (XSS, ін’єкції)"
             />
-            Перевірено на вразливості (XSS, ін’єкції)?
+            <span data-translate="js_checklist_security_1">Перевірено на вразливості (XSS, ін’єкції)?</span>
             <small
-              >(Екрануй дані, наприклад, через <code>DOMPurify</code>)</small
+              data-translate="js_checklist_security_1_small"
+              >(Екрануй дані, наприклад, через
+              <code>DOMPurify</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Перевір введення користувача на вразливості."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Використані безпечні методи доступу"
             />
-            Використані безпечні методи доступу?
+            <span data-translate="js_checklist_security_2">Використані безпечні методи доступу?</span>
             <small
+              data-translate="js_checklist_security_2_small"
               >(Наприклад, уникнення <code>eval</code> чи
               <code>innerHTML</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Уникай небезпечних методів, що можуть викликати вразливості."
-            >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>⚡ Оптимізація</legend>
+          <legend data-translate="js_optimization_legend">⚡ Оптимізація</legend>
           <label>
             <input
               type="checkbox"
               aria-label="Код оптимізовано за продуктивністю"
             />
-            Код оптимізовано за продуктивністю?
+            <span data-translate="js_checklist_optimization_1">Код оптимізовано для продуктивністі?</span>
             <small
+              data-translate="js_checklist_optimization_1_small"
               >(Наприклад, використовуй <code>forEach</code> замість
               <code>for</code> для читабельності)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Оптимізація зменшує витрати ресурсів."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
-              aria-label="Вдалося запобігти надмірному використанню ресурсів"
+              aria-label="Уникано надмірного використання ресурсів"
             />
-            Вдалося запобігти надмірному використанню ресурсів?
+            <span data-translate="js_checklist_optimization_2">Вдалося запобігти надмірному використанню ресурсів?</span>
             <small
+              data-translate="js_checklist_optimization_2_small"
               >(Перевір витоки пам’яті в замиканнях чи слухачах подій)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Неконтрольовані ресурси можуть сповільнити програму."
-            >
-              ?
-            </button>
           </label>
           <label>
-            <input type="checkbox" aria-label="Використаний строгий режим" />
-            Чи використаний строгий режим?
-            <small>(Додай <code>"use strict";</code> на початку файлу)</small>
-            <button
-              class="tooltip"
-              aria-label="Строгий режим уникає неочевидних помилок у JS."
+            <input
+              type="checkbox"
+              aria-label="Використаний строгий режим"
+            />
+            <span data-translate="js_checklist_optimization_3">Чи використаний строгий режим?</span>
+            <small
+              data-translate="js_checklist_optimization_3_small"
+              >(Додай <code>"use strict";</code> на початку файлу)</small
             >
-              ?
-            </button>
           </label>
         </fieldset>
       </section>
 
-      <section class="checklist" data-language="php" style="display: none">
-        <h2>🔟 Основні принципи чистого PHP-коду</h2>
+      <section class="checklist" data-language="php" style="display: none;">
+        <h2 data-translate="php_principles_h2">🔟 Основні принципи чистого PHP-коду</h2>
         <ul role="list">
-          <li>
+          <li data-translate="php_principle_1">
             <strong>Дотримуйся стандартів PSR</strong><br />Використовуй
             <code>PSR-12</code> для форматування коду.
           </li>
-          <li>
+          <li data-translate="php_principle_2">
             <strong>Чіткі імена змінних і методів</strong><br /><code
-              >$userRepository</code
-            >
+              >$userRepository</code>
             краще, ніж <code>$repo</code>.
           </li>
-          <li>
-            <strong>Одна функція — одна відповідальність</strong
-            ><br />Наприклад, <code>getUserData</code> лише отримує дані.
+          <li data-translate="php_principle_3">
+            <strong>Одна функція — одна відповідальність</strong><br />Наприклад,
+            <code>getUserData</code> лише отримує дані.
           </li>
-          <li>
+          <li data-translate="php_principle_4">
             <strong>DRY — Don’t Repeat Yourself</strong><br />Використовуй
             функції чи класи для повторюваного коду.
+            >
           </li>
-          <li>
+          <li data-translate="php_principle_5">
             <strong>Використовуй типізацію</strong><br />Наприклад:
             <pre><code>function add(int $a, int $b): int { return $a + $b; }</code></pre>
+            >
           </li>
-          <li>
+          <li data-translate="php_principle_6">
             <strong>Мінімізуй вкладеність</strong><br />Використовуй ранній
             <code>return</code>:
             <pre><code>if (!$user) return null;</code></pre>
           </li>
-          <li>
+          <li data-translate="php_principle_7">
             <strong>Обробляй помилки</strong><br />Використовуй
             <code>try/catch</code> для винятків.
+            >
           </li>
-          <li>
+          <li data-translate="php_principle_8">
             <strong>Коментарі пояснюють «чому»</strong><br />Наприклад:
-            <pre><code>// Використовується для кешування private $cache = [];</code></pre>
+            <pre><code>// Використовується для кешування
+private $cache = [];</code></pre>
           </li>
-          <li>
+          <li data-translate="php_principle_9">
             <strong>Використовуй Composer</strong><br />Організуй залежності
             через <code>composer.json</code>.
+            >
           </li>
-          <li>
-            <strong>Уникай глобальних змінних</strong><br />Краще передавай дані
-            через параметри.
+          <li data-translate="php_principle_10">
+            <strong>Уникай глобальних змінних</strong><br />Краще передавай
+            дані через параметри.
           </li>
         </ul>
 
-        <h2>✅ Чекліст чистого PHP-коду</h2>
+        <h2 data-translate="php_checklist_h2">✅ Чекліст чистого PHP-коду</h2>
         <fieldset>
-          <legend>🔡 Імена та змінні</legend>
+          <legend data-translate="php_names_legend">🔡 Імена та змінні</legend>
           <label>
             <input type="checkbox" aria-label="Чіткі імена змінних і методів" />
-            Чіткі імена змінних і методів?
+            <span data-translate="php_checklist_names_1">Чіткі імена змінних і методів?</span>
             <small
+              data-translate="php_checklist_names_1_small"
               >(Наприклад, <code>$userService</code> краще, ніж
               <code>$s</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Чіткі імена полегшують розуміння коду."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Магічні значення винесені в константи"
             />
-            Магічні значення винесені?
-            <small>(Наприклад, <code>const MAX_USERS = 100;</code>)</small>
-            <button
-              class="tooltip"
-              aria-label="Константи роблять код зрозумілішим."
+            <span data-translate="php_checklist_names_2">Магічні значення винесені?</span>
+            <small
+              data-translate="php_checklist_names_2_small"
+              >(Наприклад, <code>const MAX_USERS = 100;</code>)</small
             >
-              ?
-            </button>
           </label>
           <label>
             <input type="checkbox" aria-label="Немає схожих імен" />
-            Немає схожих імен?
-            <small>(Наприклад, <code>$user</code> і <code>$users</code>)</small>
-            <button class="tooltip" aria-label="Уникайте плутанини в іменах.">
-              ?
-            </button>
+            <span data-translate="php_checklist_names_3">Немає схожих імен?</span>
+            <small
+              data-translate="php_checklist_names_3_small"
+              >(Наприклад, <code>$user</code> і <code>$users</code>)</small
+            >
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧩 Структура</legend>
+          <legend data-translate="php_structure_legend">🧩 Структура</legend>
           <label>
             <input type="checkbox" aria-label="Один рядок — одна дія" />
-            Один рядок — одна дія?
-            <small>(Наприклад, <code>$sum = $a + $b;</code>)</small>
-            <button class="tooltip" aria-label="Один рядок — одна операція.">
-              ?
-            </button>
+            <span data-translate="php_checklist_structure_1">Один рядок — одна дія?</span>
+            <small
+              data-translate="php_checklist_structure_1_small"
+              >(Наприклад, <code>$sum = $a + $b;</code>)</small
+            >
           </label>
           <label>
-            <input type="checkbox" aria-label="Методи невеликі, роблять одне" />
-            Методи невеликі, роблять одне?
-            <small>(До 20-30 рядків)</small>
-            <button class="tooltip" aria-label="Одна функція — одна мета.">
-              ?
-            </button>
+            <input
+              type="checkbox"
+              aria-label="Методи невеликі, роблять одне"
+            />
+            <span data-translate="php_checklist_structure_2">Методи невеликі, роблять одне?</span>
+            <small data-translate="php_checklist_structure_2_small">(До 20-30 рядків)</small>
           </label>
+        </small>
           <label>
             <input type="checkbox" aria-label="Мінімальна вкладеність" />
-            Мінімальна вкладеність?
+            <span data-translate="php_checklist_structure_3">Мінімальна вкладеність?</span>
             <small
+              data-translate="php_checklist_structure_3_small"
               >(Ранній <code>return</code> замість вкладених
               <code>if</code>)</small
             >
-            <button
-              class="tooltip"
-              aria-label="Менша вкладеність — краща читабельність."
-            >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>♻️ Повтори</legend>
+          <legend data-translate="php_repetition_legend">♻️ Повтори</legend>
           <label>
             <input type="checkbox" aria-label="Уникнено копіпасту" />
-            Уникнено копіпасту?
-            <small>(Винось у функції чи класи)</small>
-            <button
-              class="tooltip"
-              aria-label="Повторюваний код ускладнює підтримку."
-            >
-              ?
-            </button>
+            <span data-translate="php_checklist_repetition_1">Уникнено копіпасту?</span>
+            <small data-translate="php_checklist_repetition_1_small">(Винось у функції чи класи)</small>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Схожі задачі реалізовані однаково"
             />
-            Схожі задачі реалізовані однаково?
-            <small>(Наприклад, однаковий формат логів)</small>
-            <button class="tooltip" aria-label="Уніфікація зменшує помилки.">
-              ?
-            </button>
+            <span data-translate="php_checklist_repetition_2">Схожі задачі реалізовані однаково?</span>
+            <small data-translate="php_checklist_repetition_2_small">(Наприклад, однаковий формат логів)</small>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧼 Форматування</legend>
+          <legend data-translate="php_formatting_legend">🧼 Форматування</legend>
           <label>
-            <input type="checkbox" aria-label="Дотримано PSR-12" />
-            Дотримано PSR-12?
+            <input
+              type="checkbox"
+              aria-label="Дотримано PSR-12"
+            />
+            <span data-translate="php_checklist_formatting_1">Дотримано PSR-12?</span>
             <small
+              data-translate="small"
               >(<a
                 href="https://www.php-fig.org/psr/psr-12/"
                 target="_blank"
@@ -687,543 +536,471 @@ const cachedData = getData();</code></pre>
                 >PSR-12</a
               >)</small
             >
-            <button
-              class="tooltip"
-              aria-label="PSR-12 забезпечує єдиний стиль коду."
-            >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Однакові відступи та форматування"
             />
-            Однакові відступи та форматування?
-            <small>(Перевір через форматувальник)</small>
-            <button
-              class="tooltip"
-              aria-label="Консистентний стиль полегшує співпрацю."
-            >
-              ?
-            </button>
+            <span data-translate="php_checklist_formatting_2">Однакові відступи та форматування?</span>
+            <small data-translate="php_checklist_formatting_2_small">(Перевір через форматувальник)</small>
           </label>
           <label>
-            <input type="checkbox" aria-label="Видалено невикористаний код" />
-            Видалено невикористаний код?
-            <small>(Наприклад, старі функції)</small>
-            <button
-              class="tooltip"
-              aria-label="Мертвий код ускладнює підтримку."
-            >
-              ?
-            </button>
+            <input type="checkbox"
+              aria-label="Видалено невикористаний код"
+            />
+            <span data-translate="php_checklist_formatting_3">Видалено невикористаний код?</span>
+            <small data-translate="php_checklist_formatting_3_small">(Наприклад, старі функції)</small>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧠 Логіка</legend>
+          <legend data-translate="php_logic_legend">🧠 Логіка</legend>
           <label>
-            <input type="checkbox" aria-label="Перевірено всі гілки" />
-            Перевірено всі гілки?
-            <small>(Перевір <code>if/else</code>, цикли)</small>
-            <button
-              class="tooltip"
-              aria-label="Усі гілки повинні бути протестовані."
+            <input type="checkbox"
+              aria-label="Перевірено всі гілки"
+            />
+            <span data-translate="php_checklist_logic_1">Перевірено всі гілки?</span>
+            <small
+             data-translate="php_checklist_logic_1_small"
+              >(Перевір <code>if/else</code>, цикли)</small
             >
-              ?
-            </button>
           </label>
           <label>
-            <input type="checkbox" aria-label="Оброблено винятки" />
-            Оброблено винятки?
-            <small>(Використовуй <code>try/catch</code>)</small>
-            <button
-              class="tooltip"
-              aria-label="Винятки забезпечують стабільність."
+            <input
+              type="checkbox"
+              aria-label="Оброблено винятки"
+              >
+            <span data-translate="php_checklist_logic_2">Оброблено винятки?</span>
+            <small data-translate="php_checklist_logic_2_small"
+              >(Використовуй <code>try/catch</code>)</small
             >
-              ?
-            </button>
           </label>
           <label>
-            <input type="checkbox" aria-label="Перевірено edge cases" />
-            Перевірено edge cases?
-            <small>(Наприклад, порожні дані, <code>null</code>)</small>
-            <button
-              class="tooltip"
-              aria-label="Edge cases запобігають помилкам у продакшені."
+            <input type="checkbox" aria-label="Перевірено edge cases"
+            />
+            <span data-translate="php_checklist_logic_3">Перевірено edge cases?</span>
+            <small data-translate="php_checklist_logic_3_small"
+              >(Наприклад, порожні дані, <code>light</code>)</small
             >
-              ?
-            </button>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>📜 Коментарі</legend>
+          <legend data-translate="php_comments_legend">📜 Коментарі</legend>
           <label>
             <input type="checkbox" aria-label="Є коментарі там, де треба" />
-            Є коментарі там, де треба?
-            <small>(Коментуй складну логіку)</small>
-            <button
-              class="tooltip"
-              aria-label="Коментарі для неочевидної логіки."
+            <span data-translate="php_checklist_comments_1">Є коментарі там, де треба?</span>
+            <small data-translate="php_checklist_comments_1_small">(Коментуйте складну логіку)</small>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              aria-label="Коментарі поясніють чому"
+            />
+            <span data-translate="php_checklist_comments_2">Коментарі пояснюють «чому»?</span>
+            <small data-translate="php_checklist_comments_2_small"
+              >(Наприклад, «// Для безпеки»)</small
             >
-              ?
-            </button>
           </label>
           <label>
-            <input type="checkbox" aria-label="Коментарі пояснюють чому" />
-            Коментарі пояснюють «чому»?
-            <small>(Наприклад, «// Для безпеки»)</small>
-            <button class="tooltip" aria-label="Пояснюй мету, а не дії.">
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Код зрозумілий без коментарів" />
-            Код зрозумілий без коментарів?
-            <small>(Чіткі імена зменшують потребу)</small>
-            <button class="tooltip" aria-label="Самодокументований код кращий.">
-              ?
-            </button>
+            <input
+              type="checkbox"
+              aria-label="Код зрозумілий без коментарів"
+            />
+            <span data-translate="php_checklist_comments_3">Код зрозумілий без коментарів?</span>
+            <small data-translate="php_checklist_comments_3_small"
+              >(Чітки імена зменшують потребу)</small
+            >
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧪 Тестування</legend>
+          <legend data-translate="php_testing_legend">🧪 Тестування</legend>
           <label>
             <input type="checkbox" aria-label="Код перевірено в дії" />
-            Код перевірено в дії?
-            <small>(Запусти та перевір)</small>
-            <button class="tooltip" aria-label="Перевір функціональність.">
-              ?
-            </button>
+            <span data-translate="php_checklist_testing_1">Код перевірено в дії?</span>
+            <small data-translate="php_checklist_testing_1_small">(Запустіть та перевір)</small>
           </label>
           <label>
             <input type="checkbox" aria-label="Не ламає існуючу логіку" />
-            Не ламає існуючу логіку?
-            <small>(Перевір старі функції)</small>
-            <button
-              class="tooltip"
-              aria-label="Зміни не повинні ламати старий код."
-            >
-              ?
-            </button>
+            <span data-translate="php_checklist_testing_2">Не ламає існуючу логіку?</span>
+            <small data-translate="php_checklist_testing_2_small">(Перевір старі функції)</small>
           </label>
           <label>
-            <input type="checkbox" aria-label="Протестовано автотестами" />
-            Протестовано автотестами?
-            <small>(Наприклад, <code>PHPUnit</code>)</small>
-            <button class="tooltip" aria-label="Тести підвищують надійність.">
-              ?
-            </button>
+            <input
+              type="checkbox"
+              aria-label="Протестовано автотестами"
+            />
+            <span data-translate="php_checklist_testing_3">Протестовано автотестами?</span>
+            <small data-translate="php_checklist_testing_3_small"
+              >(Наприклад, <code>PHPUnit</code>)</small
+            >
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🔒 Безпека</legend>
+          <legend data-translate="php_security_legend">🔒 Безпека</legend>
           <label>
             <input
               type="checkbox"
               aria-label="Перевірено на SQL-ін’єкції та XSS"
             />
-            Перевірено на SQL-ін’єкції та XSS?
-            <small>(Використовуй підготовлені запити)</small>
-            <button class="tooltip" aria-label="Захищай дані користувача.">
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Використані безпечні методи" />
-            Використані безпечні методи?
-            <small>(Наприклад, <code>htmlspecialchars</code>)</small>
-            <button class="tooltip" aria-label="Уникай небезпечних методів.">
-              ?
-            </button>
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <legend>⚡ Оптимізація</legend>
-          <label>
-            <input type="checkbox" aria-label="Оптимізовано продуктивність" />
-            Оптимізовано продуктивність?
-            <small>(Уникай зайвих запитів до БД)</small>
-            <button
-              class="tooltip"
-              aria-label="Оптимізація зменшує навантаження."
+            <span data-translate="php_checklist_security_1">Перевірено на SQL-ін’єкції та XSS?</span>
+            <small data-translate="php_checklist_security_1_small"
+              >(Використовуй підготовлені запити)</small
             >
-              ?
-            </button>
           </label>
           <label>
             <input
               type="checkbox"
-              aria-label="Вдалося запобігти надмірному використанню ресурсів"
+              aria-label="Використані безпечні методи"
             />
-            Вдалося запобігти надмірному використанню ресурсів?
-            <small>(Перевір кешування)</small>
-            <button
-              class="tooltip"
-              aria-label="Ефективний код економить ресурси."
+            <span data-translate="php_checklist_security_2">Використані безпечні методи?</span>
+            <small data-translate="php_checklist_security_2_small"
+              >(Наприклад, <code>htmlspecialchars</code>)</small
             >
-              ?
-            </button>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend data-translate="php_optimization_legend">⚡ Оптимізація</legend>
+          <label>
+            <input
+              type="checkbox"
+              aria-label="Оптимізовано продуктивність"
+            />
+            <span data-translate="php_checklist_optimization_1">Оптимізовано продуктивність?</span>
+            <small data-translate="php_checklist_optimization_1_small" >(Уникайте зайвих запитів до БД)</small>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              aria-label="Уникнено надмірного використання ресурсів"
+            />
+            <span data-translate="php_checklist_optimization_2">Вдалося запобігти надмірному використанню ресурсів?</span>
+            <small data-translate="php_checklist_optimization_2_small">(Перевір кешування)</small>
           </label>
         </fieldset>
       </section>
 
-      <section class="checklist" data-language="py" style="display: none">
-        <h2>🔟 Основні принципи чистого Python-коду</h2>
-        <ul role="list">
-          <li>
-            <strong>Дотримуйся PEP 8</strong><br />Використовуй
+      <section class="checklist" data-language="py" style="display: none;">
+      <h2 data-translate="py_principles_h2">🔟 Основні принципи чистого Python-коду</h2>
+      <ul role="list">
+        <li data-translate="py_principle_1">
+          <strong>Дотримуйся PEP 8</strong><br />Використовуй
             <code>flake8</code> для форматування.
+            >
           </li>
-          <li>
-            <strong>Чіткі імена змінних</strong><br /><code>user_profile</code>
+          <li data-translate="py_principle_2">
+            <strong>Чіткі імена змінних</strong><br /><code
+              >user_profile</code>
+            >
             краще, ніж <code>u</code>.
           </li>
-          <li>
+          <li data-translate="py_principle_3">
             <strong>Функція робить одну річ</strong><br />Наприклад,
-            <code>get_user_data</code> лише отримує дані.
+              ><code>get_user_data</code>
+            лише отримує дані.
+            >
           </li>
-          <li>
+          <li data-translate="py_principle_4">
+            <
             <strong>DRY — Don’t Repeat Yourself</strong><br />Використовуй
+            >
             функції чи класи для повторів.
+            >
           </li>
-          <li>
+          <li data-translate="py_principle_5">
             <strong>Використовуй list comprehensions</strong><br />Наприклад:
+            >
             <pre><code>[x*2 for x in numbers]</code></pre>
+          >
           </li>
-          <li>
-            <strong>Мінімізуй вкладеність</strong><br />Використовуй ранній
+          <li data-translate="py_principle_6">
+            <
+            >strong>Мінімізуй вкладеність</strong><br />Використовуй ранній
+            >
             <code>return</code>:
             <pre><code>if not user: return None</code></pre>
           </li>
-          <li>
+          <li data-translate="py_principle_7">
             <strong>Обробляй винятки</strong><br />Використовуй
+            >
             <code>try/except</code> для помилок.
+            >
           </li>
-          <li>
+          <li data-translate="py_principle_8">
+            <
             <strong>Коментарі пояснюють «чому»</strong><br />Наприклад:
-            <pre><code># Кеш для оптимізації
+            >
+            <pre><code># cache для оптимизации
 cache = {}</code></pre>
+            >
           </li>
-          <li>
+          <li data-translate="py_principle_9">
             <strong>Використовуй віртуальні середовища</strong><br />Наприклад,
-            <code>venv</code> або <code>poetry</code>.
+              >
+              ><code>venv</code> або <code>poetry</code>.
+              >
+            >
           </li>
-          <li>
+          <li data-translate="py_principle_10">
+            >
             <strong>Пиши самодокументований код</strong><br />Чіткі імена
+            >
             зменшують потребу в коментарях.
+            >
           </li>
         </ul>
 
-        <h2>✅ Чекліст чистого Python-коду</h2>
-        <fieldset>
-          <legend>🔡 Імена та змінні</legend>
-          <label>
-            <input type="checkbox" aria-label="Чіткі імена змінних" />
-            Чіткі імена змінних?
-            <small
-              >(Наприклад, <code>user_data</code> краще, ніж
-              <code>d</code>)</small
+      <h2 data-translate="py_checklist_h2">✅ Чекліст чистого Python-коду</h2>
+      <fieldset>
+        <legend data-translate="py_names_legend">🔡 Імена та змінні</legend>
+        <label>
+          <input type="checkbox" aria-label="Чітки імена змінних" />
+          <span data-translate="py_checklist_names_1">Чітки імена змінних?</span>
+          <small data-translate="py_checklist_names_1_small"
             >
-            <button
-              class="tooltip"
-              aria-label="Чіткі імена полегшують читання."
+            >(Наприклад, <code>user_data</code> краще, ніж
+            ><code>d</code>)</small
             >
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Магічні значення винесені" />
-            Магічні значення винесені?
-            <small>(Наприклад, <code>MAX_USERS = 100</code>)</small>
-            <button
-              class="tooltip"
-              aria-label="Константи роблять код зрозумілішим."
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            aria-label="Магіческі значення винесені"
             >
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Немає схожих імен" />
-            Немає схожих імен?
-            <small>(Наприклад, <code>user</code> і <code>users</code>)</small>
-            <button class="tooltip" aria-label="Уникайте плутанини в іменах.">
-              ?
-            </button>
+          <span data-translate="py_checklist_names_2">Магічні значення винесені?</span>
+          <small data-translate="py_checklist_names_2_small"
+            >
+            >(Наприклад, <code>MAX_USERS = 100</code>)</small
+            >
+        </label>
+        <label>
+          <input type="checkbox" aria-label="Немає схожих імен" />
+          <span data-translate="py_checklist_names_3">Немає схожих імен?</span>
+          <small data-translate="py_checklist_names_3_small"
+            >
+            >(Наприклад, <code>user</code> і <code>users</code>)</small
+            >
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend data-translate="py_structure_legend">🧩 Структура</legend>
+        <label>
+          <input type="checkbox" type="checkbox" aria-label="Один рядок — одна дія" />
+          <span data-translate="py_checklist_structure_1">Один рядок — одна дія?</span>
+          <small data-translate="py_checklist_structure_1_small"
+            >
+            >(Наприклад, <code>total = a + b</code>)</small
+            >
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            aria-label="Функції невеликі, роблять одне"
+            >
+          <span data-translate="py_checklist_structure_2">Функції невеликі, роблять одне?</span>
+          <small data-translate="py_checklist_structure_2_small">(До 20-30 рядків)</small>
+        </label>
+        <label>
+          <input type="checkbox" aria-label="Мінімальна вкладеність" />
+          <span data-translate="py_checklist_structure_3">Мінімальна вкладеність?</span>
+          <small data-translate="py_checklist_structure_3_small"
+            >
+            >(Ранній <code>return</code>)</small
+            >
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend data-translate="py_repetition_legend">♻️ Повтори</legend>
+        <label>
+          <input type="checkbox" aria-label="Уникнено копіпасту" />
+          <span data-translate="py_checklist_repetition_1">Уникнено копіпасту?</span>
+          <small data-translate="py_checklist_repetition_1_small">(Винось у функції)</small>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            aria-label="Схожі задачі реалізовані однаково"
+            >
+            <span data-translate="py_checklist_repetition_2">Схожі задачі реалізовані однаково?</span>
+            <small data-translate="py_checklist_repetition_2_small">(Наприклад, однаковий формат логів)</small>
           </label>
         </fieldset>
 
         <fieldset>
-          <legend>🧩 Структура</legend>
-          <label>
-            <input type="checkbox" aria-label="Один рядок — одна дія" />
-            Один рядок — одна дія?
-            <small>(Наприклад, <code>total = a + b</code>)</small>
-            <button class="tooltip" aria-label="Один рядок — одна операція.">
-              ?
-            </button>
-          </label>
+          <legend data-translate="py_formatting_legend">🧼 Форматування</legend>
           <label>
             <input
               type="checkbox"
-              aria-label="Функції невеликі, роблять одне"
-            />
-            Функції невеликі, роблять одне?
-            <small>(До 20-30 рядків)</small>
-            <button class="tooltip" aria-label="Одна функція — одна мета.">
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Мінімальна вкладеність" />
-            Мінімальна вкладеність?
-            <small>(Ранній <code>return</code>)</small>
-            <button
-              class="tooltip"
-              aria-label="Менша вкладеність — краща читабельність."
+              aria-label="Дотримано PEP 8"
             >
-              ?
-            </button>
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <legend>♻️ Повтори</legend>
-          <label>
-            <input type="checkbox" aria-label="Уникнено копіпасту" />
-            Уникнено копіпасту?
-            <small>(Винось у функції)</small>
-            <button
-              class="tooltip"
-              aria-label="Повторюваний код ускладнює підтримку."
-            >
-              ?
-            </button>
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              aria-label="Схожі задачі реалізовані однаково"
-            />
-            Схожі задачі реалізовані однаково?
-            <small>(Наприклад, однаковий формат логів)</small>
-            <button class="tooltip" aria-label="Уніфікація зменшує помилки.">
-              ?
-            </button>
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <legend>🧼 Форматування</legend>
-          <label>
-            <input type="checkbox" aria-label="Дотримано PEP 8" />
-            Дотримано PEP 8?
+            <span data-translate="py_checklist_formatting_1">Дотримано PEP 8?</span>
             <small
               >(<a
+                data
                 href="https://peps.python.org/pep-0008/"
                 target="_blank"
                 rel="noopener"
-                >PEP 8</a
-              >)</small
+                data
+              >PEP 8</a
+            >)</small
             >
-            <button class="tooltip" aria-label="PEP 8 забезпечує єдиний стиль.">
-              ?
-            </button>
+          </label>
           </label>
           <label>
             <input
               type="checkbox"
               aria-label="Однакові відступи та форматування"
-            />
-            Однакові відступи та форматування?
-            <small>(Перевір через <code>flake8</code>)</small>
-            <button
-              class="tooltip"
-              aria-label="Консистентний стиль полегшує співпрацю."
             >
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Видалено невикористаний код" />
-            Видалено невикористаний код?
-            <small>(Наприклад, старі функції)</small>
-            <button
-              class="tooltip"
-              aria-label="Мертвий код ускладнює підтримку."
-            >
-              ?
-            </button>
-          </label>
-        </fieldset>
+            <span data-translate="py_checklist_formatting_2">Однакові відступи та форматування?</span>
+            <small data-translate="py_checklist_formatting_2_small">(Перевод через <code>flake8</code>)</small>
+            </label>
+            <label>
+              <input type="checkbox" aria-label="Видалено невикористаний код" />
+              <span data-translate="py_checklist_formatting_3">Видалено невикористаний код?</span>
+              <small data-translate="py_checklist_formatting_3_small">(Наприклад, старі функції)</small>
+            </label>
+          </fieldset>
 
-        <fieldset>
-          <legend>🧠 Логіка</legend>
-          <label>
-            <input type="checkbox" aria-label="Перевірено всі гілки" />
-            Перевірено всі гілки?
-            <small>(Перевір <code>if/else</code>, цикли)</small>
-            <button
-              class="tooltip"
-              aria-label="Усі гілки повинні бути протестовані."
-            >
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Оброблено винятки" />
-            Оброблено винятки?
-            <small>(Використовуй <code>try/except</code>)</small>
-            <button
-              class="tooltip"
-              aria-label="Винятки забезпечують стабільність."
-            >
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Перевірено edge cases" />
-            Перевірено edge cases?
-            <small>(Наприклад, порожні дані, <code>None</code>)</small>
-            <button
-              class="tooltip"
-              aria-label="Edge cases запобігають помилкам."
-            >
-              ?
-            </button>
-          </label>
-        </fieldset>
+          <fieldset>
+            <legend data-translate="py_logic_legend">🧠 Логіка</legend>
+            <label>
+              <input type="checkbox" aria-label="Перевірено всі гілки" />
+              <span data-translate="py_checklist_logic_1">Перевірено всі гілки?</span>
+              <small data-translate="py_checklist_logic_1_small"
+                >(Перевір <code>касс/если</code>, цикли)</small
+                >
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                aria-label="Оброблено винятки"
+                >
+                <span data-translate="py_checklist_logic_2">Оброблено винятки?</span>
+                <small data-translate="py_checklist_logic_2_small">(Використовуй <code>try/except</code>)</small>
+              </label>
+              <label>
+                <input type="checkbox" aria-label="Перевірено edge cases" />
+                <span data-translate="py_checklist_logic_3">Перевірено edge cases?</span>
+                <small data-translate="py_checklist_logic_3_small"
+                  >(Наприклад, порожні дані, <code>None</code>)</small
+                  >
+              </label>
+            </fieldset>
 
-        <fieldset>
-          <legend>📜 Коментарі</legend>
-          <label>
-            <input type="checkbox" aria-label="Є коментарі там, де треба" />
-            Є коментарі там, де треба?
-            <small>(Коментуй складну логіку)</small>
-            <button
-              class="tooltip"
-              aria-label="Коментарі для неочевидної логіки."
-            >
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Коментарі пояснюють чому" />
-            Коментарі пояснюють «чому»?
-            <small>(Наприклад, «// Для кешування»)</small>
-            <button class="tooltip" aria-label="Пояснюй мету, а не дії.">
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Код зрозумілий без коментарів" />
-            Код зрозумілий без коментарів?
-            <small>(Чіткі імена зменшують потребу)</small>
-            <button class="tooltip" aria-label="Самодокументований код кращий.">
-              ?
-            </button>
-          </label>
-        </fieldset>
+            <fieldset>
+              <legend data-translate="py_comments_legend">📜 Коментарі</legend>
+              <label>
+                <input type="checkbox" aria-label="Є коментарі там, де треба" />
+                <span data-translate="py_checklist_comments_1">Є коментарі там, де треба?</span>
+                <small data-translate="py_checklist_comments_1_small">(Коментуй складну логіку)</small>
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  aria-label="Коментарі пояснюють чому"
+                  >
+                  <span data-translate="py_checklist_comments_2">Коментарі пояснюють «чому»?</span>
+                  <small data-translate="py_checklist_comments_2_small"
+                    >(Наприклад, «// Для кешування»)</small
+                    >
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    aria-label="Код зрозумілий без коментарів"
+                    >
+                  <span data-translate="py_checklist_comments_3">Код зрозумілий без коментарів?</span>
+                  <small data-translate="py_checklist_comments_3_small">(Зрозумілі імена зменшують потребу у коментарях)</small>
+                </label>
+              </fieldset>
 
-        <fieldset>
-          <legend>🧪 Тестування</legend>
-          <label>
-            <input type="checkbox" aria-label="Код перевірено в дії" />
-            Код перевірено в дії?
-            <small>(Запусти та перевір)</small>
-            <button class="tooltip" aria-label="Перевір функціональність.">
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Не ламає існуючу логіку" />
-            Не ламає існуючу логіку?
-            <small>(Перевір старі функції)</small>
-            <button
-              class="tooltip"
-              aria-label="Зміни не повинні ламати старий код."
-            >
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Протестовано автотестами" />
-            Протестовано автотестами?
-            <small>(Наприклад, <code>pytest</code>)</small>
-            <button class="tooltip" aria-label="Тести підвищують надійність.">
-              ?
-            </button>
-          </label>
-        </fieldset>
+              <fieldset>
+                <legend data-translate="py_testing_legend">🧪 Тестування</legend>
+                <label>
+                  <input type="checkbox" aria-label="Код перевірено в дії" />
+                  <span data-translate="py_checklist_testing_1">Код перевірено в дії?</span>
+                  <small data-translate="py_checklist_testing_1_small">(Запусти та перевір)</small>
+                </label>
+                <label>
+                  <input type="checkbox" aria-label="Не ламає існуючу логіку" />
+                  <span data-translate="py_checklist_testing_2">Не ламає існуючу логіку?</span>
+                  <small data-translate="py_checklist_testing_2_small">(Перевір старі функції)</small>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    aria-label="Протестовано автотестами"
+                    >
+                  <span data-translate="py_checklist_testing_3">Протестовано автотестами?</span>
+                  <small data-translate="py_checklist_testing_3_small"
+                    >(Наприклад, <code>pytest</code>)</small
+                    >
+                </label>
+              </fieldset>
 
-        <fieldset>
-          <legend>🔒 Безпека</legend>
-          <label>
-            <input type="checkbox" aria-label="Перевірено на вразливості" />
-            Перевірено на вразливості?
-            <small>(Екрануй дані, наприклад, <code>html.escape</code>)</small>
-            <button class="tooltip" aria-label="Захищай дані користувача.">
-              ?
-            </button>
-          </label>
-          <label>
-            <input type="checkbox" aria-label="Використані безпечні методи" />
-            Використані безпечні методи?
-            <small>(Наприклад, підготовлені запити до БД)</small>
-            <button class="tooltip" aria-label="Уникай небезпечних методів.">
-              ?
-            </button>
-          </label>
-        </fieldset>
+              <fieldset>
+                <legend data-translate="py_security_legend">🔒 Безпека</legend>
+                <label>
+                  <input
+                    type="checkbox"
+                    aria-label="Перевірено на вразливість"
+                    >
+                  <span data-translate="py_checklist_security_1">Перевірено на вразливість?</span>
+                  <small data-translate="py_checklist_security_1_small"
+                    >(Екрануй дані, наприклад, <code>html.escape</code>)</small
+                    >
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    aria-label="Використані безпечні методи"
+                    >
+                  <span data-translate="py_checklist_security_2">Використані безпечні методи?</span>
+                  <small data-translate="py_checklist_security_2_small"
+                    >(Наприклад, підготовлені запити до БД)</small
+                    >
+                </label>
+              </fieldset>
 
-        <fieldset>
-          <legend>⚡ Оптимізація</legend>
-          <label>
-            <input type="checkbox" aria-label="Оптимізовано продуктивність" />
-            Оптимізовано продуктивність?
-            <small>(Уникай зайвих циклів)</small>
-            <button
-              class="tooltip"
-              aria-label="Оптимізація зменшує навантаження."
-            >
-              ?
-            </button>
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              aria-label="Вдалося запобігти надмірному використанню ресурсів"
-            />
-            Вдалося запобігти надмірному використанню ресурсів?
-            <small>(Перевір кешування)</small>
-            <button
-              class="tooltip"
-              aria-label="Ефективний код економить ресурси."
-            >
-              ?
-            </button>
-          </label>
-        </fieldset>
-      </section>
-    </main>
+              <fieldset>
+                <legend data-translate="py_optimization_legend">⚡ Оптимізація</legend>
+                <label>
+                  <input
+                    type="checkbox"
+                    aria-label="Оптимізовано продуктивність"
+                    >
+                  <span data-translate="py_checklist_optimization_1">Оптимізовано продуктивність?</span>
+                  <small data-translate="py_checklist_optimization_1_small">(Уникайте зайвих циклів)</small>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    aria-label="Вдалося запобігти надмірному використанню ресурсів?"
+                    >
+                  <span data-translate="py_checklist_optimization_2">Вдалося запобігти надмірному використанню ресурсів?</span>
+                  <small data-translate="py_checklist_optimization_2_small">(Перевір кешування)</small>
+                </label>
+              </fieldset>
+            </section>
 
-    <div class="result">
-      <p class="result-text">
-        🟢 Усі пункти виконано? Ти — бог чистого коду. Пуш зі спокійною душею
-        😎🚀
-      </p>
-    </div>
+            <div class="result">
+              <p class="result-text" data-translate="result_text">
+                🟢 Усі пункти виконано? Ти — бог чистого коду. Пуш зі спокійною
+                душею 😎🚖
+              </p>
+            </div>
 
-    <footer>
-      Створено з ❤️ <strong>Andriy Ovcharov</strong><br />
-      <em>«Кодуй зі смаком. Кодуй свідомо.»</em>
-    </footer>
+            <footer>
+              <span data-translate="footer_text">Створено з ❤️ <strong>Андрий Овчаров</strong></span><br />
+              <em data-translate="footer_quote">«Кодуй зі смаками. Кодуй свідомо.»</em>
+            </footer>
 
-    <script src="js/main.js"></script>
-  </body>
-</html>
+            <script src="js/main.js"></script>
+          </body>
+        </html>
