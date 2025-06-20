@@ -4,70 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Чистий Код — Andriy Ovcharov</title>
-    <style>
-      body {
-        font-family: 'JetBrains Mono', monospace;
-        background: #0d1117;
-        color: #c9d1d9;
-        padding: 2rem;
-        max-width: 900px;
-        margin: auto;
-      }
-      h1,
-      h2 {
-        color: #58a6ff;
-      }
-      section {
-        margin-bottom: 2rem;
-        padding: 1rem;
-        border: 1px solid #30363d;
-        border-radius: 8px;
-        background: #161b22;
-      }
-      label {
-        display: block;
-        margin: 0.5rem 0;
-        cursor: pointer;
-      }
-      input[type='checkbox'] {
-        margin-right: 0.5rem;
-      }
-      li + li {
-      margin-top: 10px;
-      }
-      .checked {
-        text-decoration: line-through;
-        color: #5a5f66;
-      }
-      code {
-        background: #21262d;
-        padding: 0.2em 0.4em;
-        border-radius: 4px;
-        color: #79c0ff;
-      }
-      pre {
-        background: #21262d;
-        padding: 1em;
-        overflow-x: auto;
-        border-radius: 8px;
-        margin-top: 0.5em;
-      }
-      .result {
-        margin-top: 2rem;
-        padding: 1rem;
-        background-color: #1f6feb;
-        border-radius: 8px;
-        color: #ffffff;
-        display: none;
-        text-align: center;
-      }
-      footer {
-        margin-top: 3rem;
-        font-size: 0.9rem;
-        color: #8b949e;
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <h1>🧼 Чистий Код — Принципи + Чекліст</h1>
@@ -123,29 +60,46 @@
       <h2>✅ Чекліст чистого коду</h2>
 
       <h3>🔡 Імена та змінні</h3>
-      <label><input type="checkbox" /> Ім’я змінної/функції передає її суть?</label>
-      <label><input type="checkbox" /> Магічні значення винесені? (Якщо ні — винеси в константи)</label>
+      <label
+        ><input type="checkbox" /> Ім’я змінної/функції передає її суть?</label
+      >
+      <label
+        ><input type="checkbox" /> Магічні значення винесені? (Якщо ні — винеси
+        в константи)</label
+      >
       <label><input type="checkbox" /> Немає схожих імен, що плутають?</label>
 
       <h3>🧩 Структура</h3>
       <label><input type="checkbox" /> Один рядок — одна дія?</label>
-      <label><input type="checkbox" /> Функції/блоки невеликі, роблять одне?</label>
+      <label
+        ><input type="checkbox" /> Функції/блоки невеликі, роблять одне?</label
+      >
       <label><input type="checkbox" /> Глибина вкладеності мінімальна?</label>
 
       <h3>♻️ Повтори</h3>
-      <label><input type="checkbox" /> Уникнуто копіпасту? (Якщо ні — витягни повтор у функцію.)</label>
+      <label
+        ><input type="checkbox" /> Уникнуто копіпасту? (Якщо ні — витягни повтор
+        у функцію.)</label
+      >
       <label><input type="checkbox" /> Схожі речі реалізовані однаково?</label>
 
       <h3>🧼 Форматування</h3>
-      <label><input type="checkbox" /> Прогнав Prettier/ESLint форматувальники?</label>
       <label
-        ><input type="checkbox" /> Всі відступи, лапки та пробіли — однакові?</label
+        ><input type="checkbox" /> Прогнав Prettier/ESLint
+        форматувальники?</label
+      >
+      <label
+        ><input type="checkbox" /> Всі відступи, лапки та пробіли —
+        однакові?</label
       >
       <label><input type="checkbox" /> Видалено мертвий код?</label>
 
       <h3>🧠 Логіка</h3>
       <label><input type="checkbox" /> Перевірено всі гілки?</label>
-      <label><input type="checkbox" /> Використано ===, а не ==? (Якщо не впевнений — використовуй ===)</label>
+      <label
+        ><input type="checkbox" /> Використано ===, а не ==? (Якщо не впевнений
+        — використовуй ===)</label
+      >
       <label><input type="checkbox" /> Оброблені всі edge cases?</label>
 
       <h3>📜 Коментарі</h3>
@@ -177,22 +131,6 @@
       <em>«Кодуй зі смаком. Кодуй свідомо.»</em>
     </footer>
 
-    <script>
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      const result = document.querySelector('.result');
-
-      function updateResult() {
-        const allChecked = [...checkboxes].every(cb => cb.checked);
-        result.style.display = allChecked ? 'block' : 'none';
-      }
-
-      checkboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-          cb.parentElement.classList.toggle('checked', cb.checked);
-          updateResult();
-        });
-      });
-      updateResult();
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
