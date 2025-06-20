@@ -1,5 +1,5 @@
-# Чистий Код — Принципи + Чекліст
+# Clean Code — Principles + Checklist
 
-Інтерактивний чекліст для підтримки чистоти JS, PHP та Python коду: допомагає уникнути помилок, повторів і зайвого хаосу перед пушем.
+An interactive checklist for maintaining clean JS, PHP, and Python code: helps avoid errors, repetition, and unnecessary chaos before push.
 
  [Чекліст](https://ovcharovcoder.github.io/clean-code-checklist)
