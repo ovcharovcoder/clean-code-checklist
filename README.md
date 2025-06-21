@@ -2,8 +2,7 @@
 
 **About**
 
-An interactive checklist for maintaining clean JS, PHP, and Python code: helps avoid errors, repetition, and unnecessary chaos before push.
-The checklist supports the following programming languages: JavaScript, PHP and Python.<br>
+An interactive checklist for maintaining clean JS, PHP, and Python code: helps avoid errors, repetition, and unnecessary chaos before push.<br>
 Localized in two languages: English and Ukrainian.
 
 <img src="images/img1.png" width="800px" alt="img">
