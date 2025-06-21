@@ -2,7 +2,7 @@
 
 **About**
 
-An interactive checklist for maintaining clean JS, PHP, and Python code: helps avoid errors, repetition, and unnecessary chaos before push.<br>
+An interactive checklist for self-monitoring code quality and cleanliness in JS, PHP, and Python: helps avoid errors, repetition, and unnecessary chaos before every push.<br>
 Localized in two languages: English and Ukrainian.
 
 - Author: Andriy Ovcharov
