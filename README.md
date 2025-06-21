@@ -1,7 +1,8 @@
 # Clean Code — Principles + Checklist
 
 **About**
-An interactive checklist for maintaining clean JS, PHP, and Python code: helps avoid errors, repetition, and unnecessary chaos before push.<br>
+
+An interactive checklist for maintaining clean JS, PHP, and Python code: helps avoid errors, repetition, and unnecessary chaos before push.
 The checklist supports the following programming languages: JavaScript, PHP and Python.<br>
 Localized in two languages: English and Ukrainian.
 
