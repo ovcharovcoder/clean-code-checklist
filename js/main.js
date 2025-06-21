@@ -6,7 +6,7 @@ const translations = {
       'Чеклісти та принципи чистого коду для JavaScript, PHP та Python від Андрія Овчарова.',
     meta_keywords:
       'чистий код, JavaScript, PHP, Python, програмування, чекліст',
-    title: 'Чистий Код — JavaScript, PHP, Python',
+    title: 'Чистий Код — Принципи + Чекліст',
     header_h1: '🧼 Чистий Код — Принципи + Чекліст',
     header_p: 'Кодуй зі смаком. Кодуй свідомо. Перед пушем — перевір себе.',
     theme_toggle: 'Змінити тему',
@@ -342,7 +342,7 @@ const translations = {
       'Checklists and clean code principles for JavaScript, PHP, and Python by Andriy Ovcharov.',
     meta_keywords:
       'clean code, JavaScript, PHP, Python, programming, checklist',
-    title: 'Clean Code — JavaScript, PHP, Python',
+    title: 'Clean Code — Principles + Checklist',
     header_h1: '🧼 Clean Code — Principles + Checklist',
     header_p:
       'Code with style. Code consciously. Check yourself before pushing.',
